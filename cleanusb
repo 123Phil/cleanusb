@@ -1,0 +1,13 @@
+#!/bin/sh
+if [[ ! -d /Volumes/$1/ ]]; then
+	echo "Volume $1 not found"
+	exit 0
+fi
+echo "Initial File Listing:"
+ls -Aop /Volumes/$1
+echo "Cleaning..."
+rm -rvf /Volumes/$1/.[_TScf]*
+echo "Final File Listing:"
+ls -Aop /Volumes/$1
+echo "Ejecting Drive..."
+diskutil eject $1

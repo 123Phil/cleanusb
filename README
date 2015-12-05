@@ -1,0 +1,11 @@
+OSX has a bad habit of cluttering up USB drives.
+This script cleans and ejects the given volume.
+I use it to eject my drive every time, so I keep it in /usr/local/bin/
+
+Usage:
+$ cleanusb <drive-name>
+
+This should rm .Trashes/* .Spotlight/* and a lot of other weird clutter added.
+Take a good look at the rm line before runnning this yourself,
+you might end up deleting some hidden files that you created on purpose.
+
